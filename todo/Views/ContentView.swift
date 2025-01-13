@@ -9,9 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TDB()
+        TabView {
+            TDB()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+        }
     }
 }
+
 
 #Preview(body: {
     ContentView()

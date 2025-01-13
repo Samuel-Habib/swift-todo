@@ -41,4 +41,11 @@ class TodoViewModel: ObservableObject{
         todo.append(newTodo)
     }
     
+    func done(id: UUID){
+        if let index = todo.firstIndex(
+            where: { $0.id == id }) {
+            todo[index].isDone = true
+        }
+    }
+    
 }

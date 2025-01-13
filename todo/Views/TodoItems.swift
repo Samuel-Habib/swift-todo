@@ -17,7 +17,7 @@ struct TodoItems: View {
     
     let roundedRect = RoundedRectangle(cornerRadius: 12)
     
-    @ObservedObject private var todoViewModel = TodoViewModel()
+    @StateObject var todoViewModel = TodoViewModel()
     @State private var userInput: String = ""
     
     var body: some View {
@@ -29,13 +29,25 @@ struct TodoItems: View {
 
                 ScrollView{
                     LazyVGrid(columns: [GridItem(.fixed(firstWidth))], spacing: 10) {
-                        ForEach(0...20, id: \.self) {index in
-                            TodoItem(
-                                todoName: "hello",
-                                isDone: false,
-                                firstWidth: firstWidth,
-                                secondWidth: secondWidth
-                            )
+                        ForEach(todoViewModel.todo) {todo in
+                            HStack{
+                                ZStack{
+                                    Text(todo.todoName)
+                                    roundedRect
+                                        .fill(Color.blue)
+                                        .frame(width: firstWidth, height: 50)
+                                    Text(todo.todoName)
+                                        .foregroundStyle(.white)
+                                }
+                                Button {
+                                    todoViewModel.done(id: todo.id)
+                                    print("done")
+                                } label: {
+                                    roundedRect
+                                        .fill(Color.green)
+                                        .frame(width: secondWidth, height: 50)
+                                }
+                            }.opacity(todo.isDone ? 0.5 : 1)
                         }
                     }
                 }.onAppear{
@@ -49,6 +61,7 @@ struct TodoItems: View {
                     if(!(userInput.isEmpty)){
                         todoViewModel.createTodo(todoName: userInput, isDone: false, date: Date())
                         print(todoViewModel.todo)
+                        print("ajlskdf")
                     }
 
                 } label: {
@@ -64,3 +77,12 @@ struct TodoItems: View {
 #Preview {
     TodoItems()
 }
+
+
+//                                TodoItem(
+//                                    todoName: index.todoName,
+//                                    isDone: index.isDone,
+//                                    uuid: index.id,
+//                                    firstWidth: firstWidth,
+//                                    secondWidth: secondWidth
+//                                )
