@@ -7,11 +7,7 @@
    <FileRef
       location = "group:README.markdown">
    </FileRef>
-   <Group
-      location = "group:assets"
-      name = "assets">
-      <FileRef
-         location = "absolute:/Users/samuelfahim/Downloads/swift-todo.gif">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "absolute:/Users/samuelfahim/Downloads/swift-todo.gif">
+   </FileRef>
 </Workspace>
