@@ -19,10 +19,6 @@ struct TDB: View {
             Button(action: {
                 // This button does nothing
             }) {
-                ZStack{
-                    RoundedRectangle(cornerRadius: 12).fill(.red).frame(width: 100,height: 15)
-                    Text("Do Nothing")
-                }
             }
             Image("square.and.arrow.up")
         }

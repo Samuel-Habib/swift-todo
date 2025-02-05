@@ -27,12 +27,11 @@ struct TodoItems: View {
                 let firstWidth = totalWidth * 0.75
                 let secondWidth = totalWidth * 0.18
 
-                ScrollView{
+                ScrollView {
                     LazyVGrid(columns: [GridItem(.fixed(firstWidth))], spacing: 10) {
-                        ForEach(todoViewModel.todo) {todo in
-                            HStack{
-                                ZStack{
-                                    Text(todo.todoName)
+                        ForEach(todoViewModel.todo.filter { !$0.isDone }) { todo in
+                            HStack {
+                                ZStack {
                                     roundedRect
                                         .fill(Color.blue)
                                         .frame(width: firstWidth, height: 50)
@@ -47,11 +46,9 @@ struct TodoItems: View {
                                         .fill(Color.green)
                                         .frame(width: secondWidth, height: 50)
                                 }
-                            }.opacity(todo.isDone ? 0.5 : 1)
+                            }
                         }
                     }
-                }.onAppear{
-                    print("Total width: \(totalWidth)")
                 }
             }
             // Create a new todo

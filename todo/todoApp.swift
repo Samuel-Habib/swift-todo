@@ -11,10 +11,7 @@ import SwiftUI
 struct todoApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView {
-                ContentView()
-                    
-            }
+            tabs()
         }
     }
 }
