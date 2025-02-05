@@ -21,6 +21,7 @@
 		094A02B92D33759100BB6DC9 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A02B82D33759100BB6DC9 /* TodoViewModel.swift */; };
 		094A02BC2D3429E300BB6DC9 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A02BB2D3429E300BB6DC9 /* TodoItem.swift */; };
 		094A02BE2D3444FE00BB6DC9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A02BD2D3444FE00BB6DC9 /* Error.swift */; };
+		09BB7A772D53055A007BE66D /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 09BB7A762D53055A007BE66D /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		094A02BB2D3429E300BB6DC9 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		094A02BD2D3444FE00BB6DC9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		097C9D9A2D34D428005BF398 /* notes.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = notes.markdown; sourceTree = "<group>"; };
+		09BB7A762D53055A007BE66D /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				097C9D9A2D34D428005BF398 /* notes.markdown */,
+				09BB7A762D53055A007BE66D /* demo.gif */,
 				093D68BC2C1204820062B061 /* todo */,
 				093D68BB2C1204820062B061 /* Products */,
 			);
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				093D68C52C1204840062B061 /* Preview Assets.xcassets in Resources */,
+				09BB7A772D53055A007BE66D /* demo.gif in Resources */,
 				093D68C22C1204840062B061 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
