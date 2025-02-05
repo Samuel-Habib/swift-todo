@@ -2,6 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "container:todo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:README.markdown">
+   </FileRef>
+   <Group
+      location = "group:assets"
+      name = "assets">
+      <FileRef
+         location = "absolute:/Users/samuelfahim/Downloads/swift-todo.gif">
+      </FileRef>
+   </Group>
 </Workspace>

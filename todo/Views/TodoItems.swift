@@ -52,19 +52,20 @@ struct TodoItems: View {
                 }
             }
             // Create a new todo
-            HStack{
-                TextField("Enter your text", text: $userInput)
+            HStack {
+                TextField("Have something to do?", text: $userInput)
+
                 Button {
-                    if(!(userInput.isEmpty)){
+                    if !userInput.isEmpty {
                         todoViewModel.createTodo(todoName: userInput, isDone: false, date: Date())
                         print(todoViewModel.todo)
-                        print("ajlskdf")
+                        
+                        // clear the text field after submission
+                        userInput = ""
                     }
-
                 } label: {
                     Text("Submit")
                 }
-
             }
 
         }.padding()
