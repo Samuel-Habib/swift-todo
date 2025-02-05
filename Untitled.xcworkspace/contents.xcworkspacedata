@@ -8,6 +8,6 @@
       location = "group:README.markdown">
    </FileRef>
    <FileRef
-      location = "absolute:/Users/samuelfahim/Downloads/swift-todo.gif">
+      location = "absolute:/Users/samuelfahim/Downloads/demo.gif">
    </FileRef>
 </Workspace>
